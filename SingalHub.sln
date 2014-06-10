@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingalHub", "SingalHub\SingalHub.csproj", "{D20D6BBF-AAFE-4197-8B51-A8105530CF37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsClient", "JsClient\JsClient.csproj", "{A5CBE12E-AC6B-42A2-9388-858B0F804E43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{43F2B368-3B8C-4C4B-A7EB-FE6A57F59A89}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D20D6BBF-AAFE-4197-8B51-A8105530CF37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20D6BBF-AAFE-4197-8B51-A8105530CF37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20D6BBF-AAFE-4197-8B51-A8105530CF37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20D6BBF-AAFE-4197-8B51-A8105530CF37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5CBE12E-AC6B-42A2-9388-858B0F804E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5CBE12E-AC6B-42A2-9388-858B0F804E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5CBE12E-AC6B-42A2-9388-858B0F804E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5CBE12E-AC6B-42A2-9388-858B0F804E43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
