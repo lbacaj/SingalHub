@@ -3,21 +3,7 @@
     font-size: 16px;
 }
 
-#stockTable table {
-    border-collapse: collapse;
-}
 
-    #stockTable table th, #stockTable table td {
-        padding: 2px 6px;
-    }
-
-    #stockTable table td {
-        text-align: right;
-    }
-
-#stockTable .loading td {
-    text-align: left;
-}
 
 #stockTicker {
     overflow: hidden;

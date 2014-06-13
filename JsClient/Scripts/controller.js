@@ -34,4 +34,14 @@
     var ops = stockTickerData();
     ops.setCallbacks(setMarketState, assignStocks, replaceStock);
     ops.initializeClient();
+
+    $scope.isGreen = function (stockChange)
+    {
+        return stockChange > 0
+    };
+
+    $scope.isRed = function (stockChange)
+    {
+        return stockChange < 0
+    };
 }

@@ -24,7 +24,7 @@ app.factory('stockTickerData', ['$', '$rootScope', function ($, $rootScope) {
             //Set the hubs URL for the connection
 
             var ticker = $.connection.tickerMini
-            alert('Initializing');
+            //alert('Initializing');
             //$.hubConnection.hub.url = "http://localhost:8080/signalr";
 
             connection = $.hubConnection("http://localhost:8080/signalr");
