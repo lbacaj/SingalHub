@@ -1,5 +1,8 @@
 ﻿var app = angular.module('app', []);
 app.value('$', $);
+
+
+
 app.factory('stockTickerData', ['$', '$rootScope', function ($, $rootScope) {
     function stockTickerOperations() {
         //Objects needed for SignalR
@@ -102,3 +105,4 @@ app.factory('stockTickerData', ['$', '$rootScope', function ($, $rootScope) {
 
     return stockTickerOperations;
 }]);
+
