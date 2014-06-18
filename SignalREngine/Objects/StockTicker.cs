@@ -5,7 +5,7 @@ using System.Threading;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 
-namespace SingalHub
+namespace SignalREngine.Objects
 {
     public enum MarketState
     {
@@ -34,7 +34,7 @@ namespace SingalHub
         private volatile bool _updatingStockPrices;
         private volatile MarketState _marketState;
 
-        private StockTicker(IHubConnectionContext clients)
+        private StockTicker(Microsoft.AspNet.SignalR.Hubs.IHubConnectionContext clients)
         {
             Clients = clients;
             LoadDefaultStocks();

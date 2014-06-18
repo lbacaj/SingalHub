@@ -1,12 +1,5 @@
-﻿using Microsoft.AspNet.SignalR;
-using Microsoft.Owin.Cors;
-using Microsoft.Owin.Hosting;
-using Owin;
+﻿using SignalREngine;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SingalHub
 {
@@ -19,11 +12,24 @@ namespace SingalHub
             // See http://msdn.microsoft.com/en-us/library/system.net.httplistener.aspx 
             // for more information.
             string url = "http://localhost:8080";
-            using (WebApp.Start(url))
+
+            
+
+            try
             {
-                Console.WriteLine("Server running on {0}", url);
+                Startup.StartServer();
+
                 Console.ReadLine();
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Startup.StopServer();
+            }
+
         }
 
        

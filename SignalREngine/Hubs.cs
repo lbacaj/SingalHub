@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
+using SignalREngine;
+using SignalREngine.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SingalHub
+namespace SignalREngine
 {
     [HubName("tickerMini")]
     public class TickerHub : Hub
@@ -53,6 +55,31 @@ namespace SingalHub
         public void SendMessage(string name, string message)
         {
             Clients.All.addMessage(name, message);
+        }
+
+        public void Heartbeat()
+        {
+            Clients.All.heartbeat();
+        }
+
+        public void SendHelloObject(HelloModel hello)
+        {
+            Clients.All.sendHelloObject(hello);
+        }
+
+        public override Task OnConnected()
+        {
+            return (base.OnConnected());
+        }
+
+        public override Task OnDisconnected()
+        {
+            return (base.OnDisconnected());
+        }
+
+        public override Task OnReconnected()
+        {
+            return (base.OnDisconnected());
         }
     }
 }
