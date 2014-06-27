@@ -1,0 +1,65 @@
+﻿
+<script src="~/Scripts/StockTicker.js"></script>
+
+<script src="~/Scripts/d3.js"></script>
+<script src="~/Scripts/epoch.js"></script>
+<script src="~/Scripts/data.js"></script>
+
+@{
+    ViewBag.Title = "EpochRT";
+}
+
+<h2>EpochRT</h2>
+
+
+<div id="real-time-area" class="epoch" style="height: 200px"></div>
+
+<script>
+    $(function () {
+        var data = new RealTimeData(4);
+
+        var chart = $('#real-time-area').epoch({
+            type: 'time.area',
+            data: data.history(),
+            axes: ['left', 'bottom', 'right']
+        });
+
+        setInterval(function () { chart.push(data.next()); }, 1000);
+        chart.push(data.next());
+    });
+</script>
+
+
+
+<div class="jumbotron">
+    <input type="button" class="btn btn-success" id="open" value="Open Market" />
+    <input type="button" class="btn btn-danger" id="close" value="Close Market" disabled="disabled" />
+    <input type="button" class="btn btn-default" id="reset" value="Reset" />
+    <h2>Live Stock Table</h2>
+    <div id="stockTable">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                    <th>Open</th>
+                    <th>High</th>
+                    <th>Low</th>
+                    <th>Change</th>
+                    <th>%</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="loading"><td colspan="7">loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <h2>Live Ticker</h2>
+    <div id="stockTicker">
+        <div class="inner">
+            <ul>
+                <li class="active loading">loading...</li>
+            </ul>
+        </div>
+    </div>
+</div>

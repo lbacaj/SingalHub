@@ -40,7 +40,7 @@ namespace SignalREngineServiceWindowsService
         /// <param name="args"></param>
         protected override void OnStart(string[] args)
         {
-            Startup.StartServer("http://localhost:8080");
+            Startup.StartServer("http://localhost:8085");
             base.OnStart(args);
         }
 

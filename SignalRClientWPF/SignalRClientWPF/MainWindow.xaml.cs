@@ -16,7 +16,7 @@ namespace SignalRClientWPF
     public partial class MainWindow : Window
     {
         public System.Threading.Thread Thread { get; set; }
-        public string Host = "http://localhost:8080/";
+        public string Host = "http://localhost:8085/";
 
         public IHubProxy Proxy { get; set; }
         public HubConnection Connection { get; set; }

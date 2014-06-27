@@ -59,8 +59,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\epoch.0.5.2.min.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="LICENSE.txt" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-cookies.js" />
@@ -81,7 +83,12 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\controller.js" />
+    <Content Include="Scripts\d3.js" />
+    <Content Include="Scripts\d3.min.js" />
+    <Content Include="Scripts\data.js" />
     <Content Include="Scripts\directives.js" />
+    <Content Include="Scripts\epoch.0.5.2.min.js" />
+    <Content Include="Scripts\epoch.js" />
     <Content Include="Scripts\factory.js" />
     <Content Include="Scripts\filters.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
@@ -390,7 +397,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\StockTicker.css" />
-    <Content Include="Default.html" />
+    <Content Include="DefaultAngular.html" />
     <Content Include="DefaultSample.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />

@@ -28,9 +28,9 @@ app.factory('stockTickerData', ['$', '$rootScope', function ($, $rootScope) {
 
             var ticker = $.connection.tickerMini
             //alert('Initializing');
-            //$.hubConnection.hub.url = "http://localhost:8080/signalr";
+            //$.hubConnection.hub.url = "http://localhost:8085/signalr";
 
-            connection = $.hubConnection("http://localhost:8080/signalr");
+            connection = $.hubConnection("http://localhost:8085/signalr");
             proxy = connection.createHubProxy('tickerMini');
 
             configureProxyClientFunctions();

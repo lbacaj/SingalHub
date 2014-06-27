@@ -31,7 +31,7 @@ namespace SignalREngine
         {
             //Set a URL if none is there
             if (String.IsNullOrEmpty(_url))
-                _url = "http://localhost:8080";
+                _url = "http://localhost:8085";
 
             Console.WriteLine("Server running on {0}", _url);
 
